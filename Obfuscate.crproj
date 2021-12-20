@@ -1,0 +1,30 @@
+<project baseDir="bin\Debug\net472" outputDir="..\..\Obfuscated" seed="seed" >
+    <rule pattern="true" inherit="false">
+        <protection id="rename"  >
+            <argument name="mode" value="debug" />
+            <argument name="renPublic" value="true" /> <!-- works fine if it's false -->
+            <argument name="renEnum" value="true" />
+        </protection>
+        <!--<protection id="invalid metadata" />-->
+        <protection id="harden" />
+    </rule>
+
+    <module path="PT.PM.Cli.exe" />
+    <module path="PT.PM.Dsl.dll" />
+
+    <module path="AspxParser.dll" />
+    <module path="PT.PM.AntlrUtils.dll" />
+    <module path="PT.PM.CSharpParseTreeUst.dll" />
+    <module path="PT.PM.JavaParseTreeUst.dll" />
+    <module path="PT.PM.JavaScriptParseTreeUst.dll" />
+    <module path="PT.PM.PythonParseTreeUst.dll" />
+    <module path="PT.PM.PhpParseTreeUst.dll" />
+
+    <module path="PT.PM.MySqlParseTreeUst.dll" />
+    <module path="PT.PM.PlSqlParseTreeUst.dll" />
+    <module path="PT.PM.TSqlParseTreeUst.dll" />
+
+    <module path="PT.PM.Common.dll" />
+    <module path="PT.PM.Matching.dll" />
+    <module path="PT.PM.Patterns.dll" />
+</project>
